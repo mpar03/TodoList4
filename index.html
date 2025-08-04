@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="main">
+
+    <div class="column">
+      <h2 class="list-title">To-Do List</h2>
+      <div class="container" id="container1"></div>
+    </div>
+    <div class="column">
+      <h2 class="list-title">Wish List</h2>
+      <div class="container" id="container2"></div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { TaskUI } from './TaskUI.js';
+    document.addEventListener("DOMContentLoaded", () => {
+      new TaskUI(document.getElementById("container1"), "tasks-1");
+      new TaskUI(document.getElementById("container2"), "tasks-2");
+    });
+  </script>
+</body>
+</html>
